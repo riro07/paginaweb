@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+:root{
+    --background-body: rgba(41, 41, 41, 0.9) ;
+    --background-contenedor: rgb(255, 255, 255);
+    --border-box: none;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url("img/fondomadera.jpg");
+    padding: 0px 15px;
+    transition: .6 ease all;
+    min-width: 440px;
+
+}
+
+body.dark{
+    background-image: url("img/fondomaderadark.jpg");
+}
+
+/* cuando el body tenga la clase dark entonces el 
+".contenedor-presentacion" va a sufir esos cambios*/
+/*
+body.dark .contenedor-presentacion{
+}
+*/
+
+/*================= SWITCH ===================*/
+
+.switch{
+    background-color: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    margin-bottom: 0px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+
+.switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3 ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+.switch.active{
+    background: orange;
+    color: #000;
+}
+
+.active::after{
+    right: 0;
+    left: unset;
+}
+
+.switch span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+
+/*================= HEADER = TITULO Y NAVBAR ==================*/
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: var(--border-box);
+    width: 100%;
+    padding: 0px 1px;
+    height: auto;
+    margin-bottom: 5px;
+    line-height: 50px;
+}
+
+#titulo{
+    font-family: 'Poppins', sans-serif;
+    border: var(--border-box);
+    padding: 20px 5px ;
+    margin-bottom: 20px;
+    font-size: 45px;
+    font-weight: 400;
+    text-align: center;
+}
+
+#titulo span{
+    color: rgb(0, 0, 0, .6);
+    font-size: 25px;
+}
+
+/*ul*/
+.navbar{
+    margin: 5px 5px;
+    padding: 1px;
+    display: inline-flex;
+    justify-content: space-around;
+    border: var(--border-box);
+    list-style:none;
+    display: inline-flex;
+}
+
+.menu{
+    color: black;
+    margin: 20px;
+    text-decoration: none;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+.menu:hover{
+    text-shadow: 0px 0px 1px;
+}
+
+/*====================================== CONTENEDORES ==========================================*/
+
+.contenedores{
+    background-color: var(--background-contenedor);
+    border: var(--border-box);
+    max-width: 960px;
+    min-width: 400px;
+    width: 100%;
+    max-height: auto;
+    height: 100%;
+    margin: 15px auto;
+    padding: 20px;
+    box-shadow: 2px 2px 30px black;
+}
+
+/*==================================== CONTENEDOR  ================================*/
+
+main{
+    border: var(--border-box);
+    width: 100%;
+    text-align: center;
+}
+
+section{
+    margin: 5px 5px;
+    padding: 5px;
+    border: var(--border-box);
+}
+
+.contenido{
+    border: var(--border-box);
+    margin: 1px 1px;
+    padding: 5px 5px;
+    width: 100%;
+}
+
+/*=============================== CONTENIDO DE CONTENEDOR ============================*/
+
+#fotomia{
+    float: left;
+    margin: 0px 15px 0px 0px;
+}
+
+.h1{
+    border: var(--border-box);
+    margin: 5px 5px;
+    padding: 10px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+}
+
+.imagenes{
+    border: var(--border-box);
+    width: 230px;
+    height: auto;
+}
+
+.parrafos{
+    margin: 5px 5px;
+    padding: 10px;
+    border: var(--border-box);
+    font-family: 'Syne Mono', cursive;
+}
+
+.li{
+    font-size: 23px;
+}
+
+.ul{
+    list-style:none;
+}
+
+.span{
+    font-family: 'Syne Mono', monospace;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.a-paginasweb{
+    font-family: 'Syne Mono', monospace;
+    color: black;
+    text-decoration: none;
+}
+
+.a-paginasweb:hover{
+    text-shadow: 0px 0px 1px black;
+    text-decoration: underline;
+}
+
+/*==================================== FOOTER ======================================*/
+
+footer{
+    border: var(--border-box);
+    background-color: white;
+    margin: 15px auto;
+    max-width: 960px;
+    min-width: 400px;
+    width: 100%;
+    max-height: auto;
+    height: 100%;
+    text-align: center;
+    padding: 10px 10px;
+    box-shadow: 2px 2px 30px black;
+}
+
+.bx-clipboard, .bxl-github, .bxl-linkedin-square, .bxl-facebook-circle{
+    font-size: 30px ;
+    padding: 0px 25px;
+}
+
+/*============= BOTON FIJO ===============*/
+
+#scrollup{
+    position: fixed;
+    font-size: 50px;
+    bottom: 5px;
+    right: 15px;
+}
+
+.bxs-chevron-up-square{
+    color: black;
+}
+
+/*======================================= RESPONSIVE =====================================*/
+
+@media (max-width: 900px){
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+
+    }
+
+    #titulo{
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+    .navbar{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5px;
+    }
+
+    .menu{
+        padding: 1px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    #titulo1{
+        padding: 0px;
+    }
+
+    .descripcionsolo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .articlea{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #fotomia{
+        float: none;
+    }
+}
