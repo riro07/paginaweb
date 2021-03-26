@@ -1,5 +1,6 @@
 const btnSwitch = document.querySelector("#switch");
 
+
 btnSwitch.addEventListener("click", () => {
     /* Esta accediendo al body y esta alterando la class. 
     toggle = si no tiene una clase se la va a poner, si la tiene se la quita */
