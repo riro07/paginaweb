@@ -227,6 +227,11 @@ section{
     text-decoration: underline;
 }
 
+#certificados{
+    color: red;
+    text-decoration: none;
+}
+
 /*==================================== FOOTER ======================================*/
 
 footer{
