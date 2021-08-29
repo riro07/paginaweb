@@ -1,3 +1,6 @@
+document.addEventListener('DOMContentLoaded', function(){ 
+    // your code goes here
+}, false);
 const btnSwitch = document.querySelector("#switch");
 
 
